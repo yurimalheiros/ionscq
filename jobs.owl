@@ -1,0 +1,312 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="file:/Users/yurimalheiros/Estudo/doutorado/experimento/brain.owl#"
+     xml:base="file:/Users/yurimalheiros/Estudo/doutorado/experimento/brain.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="file:/Users/yurimalheiros/Estudo/doutorado/experimento/brain.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- file:/Users/yurimalheiros/Estudo/doutorado/experimento/brain.owl#makes -->
+
+    <owl:ObjectProperty rdf:about="file:/Users/yurimalheiros/Estudo/doutorado/experimento/brain.owl#makes"/>
+    
+
+
+    <!-- http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#employer -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#employer"/>
+    
+
+
+    <!-- http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#vehicle -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#vehicle"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- file:/Users/yurimalheiros/Estudo/doutorado/experimento/brain.owl#Academy -->
+
+    <owl:Class rdf:about="file:/Users/yurimalheiros/Estudo/doutorado/experimento/brain.owl#Academy"/>
+    
+
+
+    <!-- file:/Users/yurimalheiros/Estudo/doutorado/experimento/brain.owl#Bank -->
+
+    <owl:Class rdf:about="file:/Users/yurimalheiros/Estudo/doutorado/experimento/brain.owl#Bank"/>
+    
+
+
+    <!-- file:/Users/yurimalheiros/Estudo/doutorado/experimento/brain.owl#BankClerk -->
+
+    <owl:Class rdf:about="file:/Users/yurimalheiros/Estudo/doutorado/experimento/brain.owl#BankClerk">
+        <owl:equivalentClass rdf:resource="file:/Users/yurimalheiros/Estudo/doutorado/experimento/brain.owl#Clerk"/>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/yurimalheiros/Estudo/doutorado/experimento/brain.owl#BankEmployee -->
+
+    <owl:Class rdf:about="file:/Users/yurimalheiros/Estudo/doutorado/experimento/brain.owl#BankEmployee">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#Employee"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#employer"/>
+                        <owl:someValuesFrom rdf:resource="file:/Users/yurimalheiros/Estudo/doutorado/experimento/brain.owl#Bank"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/yurimalheiros/Estudo/doutorado/experimento/brain.owl#Biker -->
+
+    <owl:Class rdf:about="file:/Users/yurimalheiros/Estudo/doutorado/experimento/brain.owl#Biker">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#vehicle"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#Bike"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#Adult"/>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/yurimalheiros/Estudo/doutorado/experimento/brain.owl#Clerk -->
+
+    <owl:Class rdf:about="file:/Users/yurimalheiros/Estudo/doutorado/experimento/brain.owl#Clerk"/>
+    
+
+
+    <!-- file:/Users/yurimalheiros/Estudo/doutorado/experimento/brain.owl#Phd -->
+
+    <owl:Class rdf:about="file:/Users/yurimalheiros/Estudo/doutorado/experimento/brain.owl#Phd"/>
+    
+
+
+    <!-- file:/Users/yurimalheiros/Estudo/doutorado/experimento/brain.owl#Professor -->
+
+    <owl:Class rdf:about="file:/Users/yurimalheiros/Estudo/doutorado/experimento/brain.owl#Professor">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="file:/Users/yurimalheiros/Estudo/doutorado/experimento/brain.owl#Phd"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#employer"/>
+                        <owl:someValuesFrom rdf:resource="file:/Users/yurimalheiros/Estudo/doutorado/experimento/brain.owl#Academy"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- file:/Users/yurimalheiros/Estudo/doutorado/experimento/brain.owl#University -->
+
+    <owl:Class rdf:about="file:/Users/yurimalheiros/Estudo/doutorado/experimento/brain.owl#University"/>
+    
+
+
+    <!-- http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#Adult -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#Adult"/>
+    
+
+
+    <!-- http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#Bike -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#Bike">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#Vehicle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#Car -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#Car">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#Vehicle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#Company -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#Company"/>
+    
+
+
+    <!-- http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#Driver -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#Driver">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#Adult"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#vehicle"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#Vehicle"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#Employee -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#Employee">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#Adult"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#employer"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#Company"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#Machine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#Machine"/>
+    
+
+
+    <!-- http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#Pilot -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#Pilot">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#Adult"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#vehicle"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#Machine"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#vehicle"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#Transportation"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#Transportation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#Transportation"/>
+    
+
+
+    <!-- http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#TransportationCompany -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#TransportationCompany"/>
+    
+
+
+    <!-- http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#TransportationEmployee -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#TransportationEmployee">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#Adult"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#employer"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#TransportationCompany"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#Truck -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#Truck"/>
+    
+
+
+    <!-- http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#TruckCompany -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#TruckCompany"/>
+    
+
+
+    <!-- http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#TruckDriver -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#TruckDriver">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#Adult"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#employer"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#TruckCompany"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#vehicle"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#Truck"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#Vehicle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/yurimalheiros/ontologies/2016/9/untitled-ontology-322#Vehicle"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.3.20160319-0906) https://github.com/owlcs/owlapi -->
+
